@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A philosophical quiz application">
+        <meta name="keywords" content="philosophy, quiz, game">
+        <meta name="author" content="porcielf-eagle">
+        <title>Philosophical Quiz</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Philosophical Quiz</h1>
+            <nav aria-label="Navigation Menu">
+                <a href="#login">Login</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#leaderboard">Leaderboard</a>
+            </nav>
+        </header>
+        <main>
+            <section id="login-page" aria-label="Login Page">
+                <h2>Login</h2>
+                <input type="text" id="player-name"
+                placeholder="Enter your name" aria-describedby="name-help">
+                <p id="name-help">Please, enter your full name.</p>
+                <button id="join-button">Join Quiz</button>
+            </section>
+            <section id="quiz-page" aria-label="Quiz Page">
+                <h2>Quiz</h2>
+                <div id="question-container">What's the meaning of life?</div>
+                <button id="submit-answer">Submit Answer</button>
+            </section>
+            <section id="leaderboard-page" aria-label="Leaderboard Page">
+                <h2>Leaderboard</h2>
+                <table id="leaderboard-container">
+                    <caption>
+                        Leaderboard with scores.
+                    </caption>
+                    <thead>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <h4>MENU</h4>
+                <a href="#login">Login</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#leaderboard">Leaderboard</a>
+            </nav>            <ul>
+                <li><h4>POLICIES</h4></li>
+                <li><a href="./privacy.html">Privacy Policy</a></li>
+                <li><a href="./cookies.html">Cookie Policy</a></li>
+            </ul>
+            <div>
+                <h4>COPYRIGHT</h4>
+                <p>&copy; porcielf-eagle<br>2025 Philosophical Quiz.
+                <br>All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
