@@ -2,7 +2,7 @@
 
 A **real-time multiplayer quiz game** where players join dynamic rooms, answer thought-provoking questions, and climb the leaderboard in pursuit of philosophical glory. This project is a **learning exercise** that explores frontend and backend development, databases, caching, containerization, and version control.  
 
-⚠️ **DISCLAIMER**: This project is still under development. It is **not** a production-ready application — please treat it as an experimental work-in-progress.
+⚠️ **DISCLAIMER**: This project is still under development. It is **not** a production-ready application — please treat it as an experimental work-in-progress. Be careful.
 
 ---
 
