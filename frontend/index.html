@@ -28,16 +28,24 @@
             </section>
             <section id="quiz-page" aria-label="Quiz Page">
                 <h2>Quiz</h2>
-                <div id="question-container">What's the meaning of life?</div>
-                <button id="submit-answer">Submit Answer</button>
+                <div id="question-container"
+                    aria-live="polite">What's the meaning of life?</div>
+                <button id="submit-answer"
+                    aria-label="Submit your answer">Submit Answer</button>
             </section>
             <section id="leaderboard-page" aria-label="Leaderboard Page">
-                <h2>Leaderboard</h2>
-                <table id="leaderboard-container">
+                <h2 id="leaderboard-heading">Leaderboard</h2>
+                <table id="leaderboard-container"
+                    aria-labelledby="leaderboard-heading"
+                    aria-live="polite">
                     <caption>
                         Leaderboard with scores.
                     </caption>
                     <thead>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
                     </thead>
                     <tbody>
                     </tbody>
@@ -47,12 +55,13 @@
             </section>
         </main>
         <footer>
-            <nav>
+            <nav id="footer-nav" aria-label="Navigation Menu">
                 <h4>MENU</h4>
                 <a href="#login">Login</a>
                 <a href="#quiz">Quiz</a>
                 <a href="#leaderboard">Leaderboard</a>
-            </nav>            <ul>
+            </nav>
+            <ul aria-label="Privacy and Cookie Policies">
                 <li><h4>POLICIES</h4></li>
                 <li><a href="./privacy.html">Privacy Policy</a></li>
                 <li><a href="./cookies.html">Cookie Policy</a></li>
