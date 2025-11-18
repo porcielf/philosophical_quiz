@@ -57,7 +57,7 @@ a {
 
 header {
     height: 25vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +71,11 @@ header {
     );
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 1em;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 0;
+    padding-left: 0;
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: black;
@@ -80,7 +84,7 @@ header {
 header nav {
     flex: 1;
     height: 8vh;
-    width: 90vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -131,3 +135,9 @@ header nav a:hover {
         width: 80vw;
     }
 }
+/*
+footer {
+    height: 20vh;
+    width: 100vw;
+    overflow: hidden;
+}*/
