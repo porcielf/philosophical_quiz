@@ -209,3 +209,20 @@ footer a:hover {
         margin-top: -0.02em;
     } 
 }
+
+main {
+    position: relative;
+    max-height: 38vh;
+    width: 60vw;
+}
+
+#login-page {
+}
+
+#quiz-page {
+    display: none;
+}
+
+#leaderboard-page {
+    display: none;
+}
