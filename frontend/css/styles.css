@@ -244,6 +244,7 @@ main {
     animation-duration: 1s;
     animation-play-state: running;
     animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 #login-page {
@@ -265,9 +266,10 @@ main {
     animation-duration: 1s;
     animation-play-state: running;
     animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
-@open-page {
+@keyframes open-page {
     from {
         clip-path: polygon(51% 53%, 51% 53%, 51% 53%, 51% 53%, 51% 53%,
         51% 53%, 51% 53%, 51% 53%, 51% 53%);
