@@ -12,6 +12,7 @@ body {
     color: #7EFF00;
     font-family: "Palatino Linotype", "Book Antiqua", serif;
     font-size: 16.5px;
+    height: 100vh;
 }
 
 html, body {
@@ -24,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, serif;
 }
 
-p {
+p, label {
     filter: drop-shadow(0px 0px 0.5em rgb(126, 255, 0));
 }
 
@@ -211,12 +212,29 @@ footer a:hover {
 }
 
 main {
-    position: relative;
-    max-height: 38vh;
-    width: 60vw;
+    position: absolute;
+    top: 25vh;
+    bottom: 17.5vh;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #login-page {
+    height: 28vh;
+    /*flex: 1;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
 }
 
 #quiz-page {
