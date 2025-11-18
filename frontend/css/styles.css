@@ -168,3 +168,21 @@ footer {
 #privacy-link {
     margin-top: 1.75%;
 }
+
+@media (max-width: 600px) {
+    footer a {
+        font-size: 15px;
+    }
+
+    .not-mobile {
+        display: none;
+    }
+
+    #copyright-text {
+        margin-top: 35%;
+    }
+
+    #footer-nav {
+        max-height: 10vh;
+    }
+}
