@@ -137,10 +137,24 @@ header nav a:hover {
 }
 
 footer {
-    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 17.5vh;
     width: 100%;
-    overflow: hidden;
-    background-color: #111111;
+    background-color: #43124e;
+    opacity: 0.8;
+    background-image:
+    radial-gradient(circle at center center, #000000, #43124e);
+    background-image:
+    radial-gradient(circle at center center, #000000, #43124e),
+    repeating-radial-gradient(circle at center center, #000000, #000000, 10px,
+    transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-size: 1px;
 }
