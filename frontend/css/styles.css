@@ -135,9 +135,12 @@ header nav a:hover {
         width: 80vw;
     }
 }
-/*
+
 footer {
     height: 20vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
-}*/
+    background-color: #111111;
+    margin: 0;
+    padding: 0;
+}
