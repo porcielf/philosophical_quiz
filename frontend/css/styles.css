@@ -80,7 +80,7 @@ header {
 header nav {
     flex: 1;
     height: 8vh;
-    width: 100vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -105,4 +105,29 @@ header nav a:hover {
     box-shadow: 0px 0px 0.5em 0px rgba(0, 249, 255, 1) inset;
     filter: drop-shadow(0px 0px 0.5em rgba(0, 249, 255, 1));
     text-stroke: 0.5em rgba(1, 1, 122, 0.75);
+}
+
+@media (max-width: 600px) {
+    header {
+        max-width: 600px;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 18px;
+        word-spacing: auto;
+        letter-spacing: auto;
+        margin-top: 36px;
+    }
+    
+    header nav a {
+        font-size: 16px;
+        padding: 0.5em;
+    }
+
+    header nav {
+        height: auto;
+        width: 80vw;
+    }
 }
