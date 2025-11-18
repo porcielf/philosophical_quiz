@@ -228,13 +228,20 @@ main {
 }
 
 #login-page {
-    height: 28vh;
+    height: 35vh;
+    width: 50vw;
     /*flex: 1;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-around;
+    background-image: url("../images/classical-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+    32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
 
 #quiz-page {
