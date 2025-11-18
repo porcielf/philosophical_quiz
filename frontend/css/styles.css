@@ -152,9 +152,19 @@ footer {
     repeating-radial-gradient(circle at center center, #000000, #000000, 10px,
     transparent 20px, transparent 10px);
     background-blend-mode: multiply;
+    background-size: 1px;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-size: 1px;
+    text-align: center;
+}
+
+#policies-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#privacy-link {
+    margin-top: 1.75%;
 }
