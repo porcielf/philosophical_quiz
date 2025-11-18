@@ -227,6 +227,25 @@ main {
     align-items: center;
 }
 
+#login-page-border {
+    display: flex;
+    flex-direction: column;
+    height: 36.5vh;
+    width: 51.5vw;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+    32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    background-image: url("../images/silver-border.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: open-page;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+}
+
 #login-page {
     height: 35vh;
     width: 50vw;
@@ -242,6 +261,22 @@ main {
     background-repeat: no-repeat;
     clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
     32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    animation-name: open-page;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+}
+
+@open-page {
+    from {
+        clip-path: polygon(51% 53%, 51% 53%, 51% 53%, 51% 53%, 51% 53%,
+        51% 53%, 51% 53%, 51% 53%, 51% 53%);
+    }
+
+    to {
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+        32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    }
 }
 
 #quiz-page {
