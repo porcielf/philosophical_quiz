@@ -183,6 +183,16 @@ footer {
     }
 
     #footer-nav {
+        position: relative;
         max-height: 10vh;
+        box-sizing: border-box;*/
     }
+
+    #footer-nav p {
+        margin-top: -0.45em;
+    }
+
+    #cookie-paragraph {
+        margin-top: -0.02em;
+    } 
 }
