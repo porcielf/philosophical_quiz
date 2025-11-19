@@ -253,7 +253,7 @@ footer a:hover {
 
 main {
     position: absolute;
-    top: 25vh;
+    top: 28vh;
     bottom: 17.5vh;
     left: 0;
     right: 0;
@@ -268,7 +268,7 @@ main {
 }
 
 #login-page-border {
-    display: flex;
+    display: /*flex*/none;
     flex-direction: column;
     height: 36.5vh;
     width: 51.5vw;
@@ -353,8 +353,56 @@ main {
     box-shadow: 0 0 0 2px #7EFF0099;
 }
 
+#quiz-page-border {
+    display: flex/*none*/;
+    flex-direction: column;
+    background-image: url("../images/silver-border.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-name: open-quiz-border-from-login-page;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
 #quiz-page {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    animation-name: open-quiz-from-login-page;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes open-quiz-border-from-login-page {
+    from {
+        height: 36.5vh;
+        width: 51.5vw;
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+        32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    }
+
+    to {
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 79%, 100% 100%,
+        0 100%, 0 80%, 0% 43%, 0 0);
+    }
+}
+
+@keyframes open-quiz-from-login-page {
+    from {
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+        32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    }
+
+    to {
+        clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 79%, 100% 100%,
+        0 100%, 0 80%, 0% 43%, 0 0);
+    }
 }
 
 #leaderboard-page {
@@ -362,6 +410,11 @@ main {
 }
 
 @media (max-width: 600px) {
+
+    main {
+        top: 25vh;
+}
+
     #login-page-border {
         height: 50.5vh;
         width: 64.5vw;
