@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     pageLinks.forEach(link => {
-        link.addEventListener("onclick", (e) => {
+        link.addEventListener("click", (e) => {
             e.preventDefault();
             const   targetPage = link.getAttribute("data-page");
             switchPage(targetPage);
