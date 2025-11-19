@@ -356,6 +356,8 @@ main {
 #quiz-page-border {
     display: flex/*none*/;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url("../images/silver-border.webp");
     background-size: cover;
     background-position: center;
@@ -370,6 +372,12 @@ main {
 #quiz-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     animation-name: open-quiz-from-login-page;
     animation-duration: 1s;
     animation-play-state: running;
@@ -395,13 +403,19 @@ main {
 
 @keyframes open-quiz-from-login-page {
     from {
+        height: 35vh;
+        width: 50vw;
         clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
         32% 100%, 6% 78%, 0% 43%, 17% 12%);
+        background-image: url("../images/classical-background.webp");
     }
 
     to {
+        height: 98%;
+        width: 98%;
         clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 79%, 100% 100%,
         0 100%, 0 80%, 0% 43%, 0 0);
+        background-image: url("../images/quiz-background.webp");
     }
 }
 
@@ -410,15 +424,15 @@ main {
 }
 
 @media (max-width: 600px) {
-
     main {
         top: 25vh;
-}
+    }
 
     #login-page-border {
         height: 50.5vh;
         width: 64.5vw;
     }
+
     #login-page {
         height: 48vh;
         width: 62vw;
