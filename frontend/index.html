@@ -14,8 +14,8 @@
         <header>
             <h1>Philosophical Quiz</h1>
             <nav aria-label="Navigation Menu">
-                <a href="#login">Login</a>
-                <a href="#quiz">Quiz</a>
+                <a href="#login" data-page="login">Login</a>
+                <a href="#quiz" data-page="quiz">Quiz</a>
                 <a href="#leaderboard">Leaderboard</a>
             </nav>
         </header>
@@ -75,8 +75,8 @@
         <footer>
             <nav id="footer-nav" aria-label="Navigation Menu">
                 <h4>MENU</h4>
-                <p><a href="#login">Login</a></p>
-                <p><a href="#quiz">Quiz</a></p>
+                <p><a href="#login" data-page="login">Login</a></p>
+                <p><a href="#quiz" data-page="quiz">Quiz</a></p>
                 <p id="footer-last-paragraph">
                 <a href="#leaderboard">Leaderboard</a>
                 </p>
@@ -98,5 +98,6 @@
                 <p class="not-mobile">All rights reserved.</p>
             </div>
         </footer>
+        <script src="./scripts/page-switcher.js"></script>
     </body>
 </html>

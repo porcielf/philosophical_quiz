@@ -270,7 +270,7 @@ main {
 }
 
 #login-page-border {
-    display: flex;
+    display: flex/*none*/;
     flex-direction: column;
     height: 36.5vh;
     width: 51.5vw;
@@ -407,7 +407,7 @@ main {
 }
 
 #quiz-page-border {
-    display: none;
+    display: none/*flex*/;
     flex-direction: column;
     justify-content: center;
     align-items: center;
