@@ -371,11 +371,13 @@ main {
 }
 
 #quiz-page {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
+    background-image: url("../images/quiz-background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -408,7 +410,6 @@ main {
         width: 50vw;
         clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
         32% 100%, 6% 78%, 0% 43%, 17% 12%);
-        background-image: url("../images/classical-background.webp");
     }
 
     to {
@@ -416,8 +417,18 @@ main {
         width: 98vw;
         clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 79%, 100% 100%,
         0 100%, 0 80%, 0% 43%, 0 0);
-        background-image: url("../images/quiz-background.webp");
     }
+}
+
+#quiz-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #leaderboard-page {
