@@ -36,7 +36,7 @@ button {
     font-size: 18px;
     background: #222222;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 0.25em;
     font-weight: bold;
     text-stroke: 0.05em rgba(189, 168, 0, 1);
     -webkit-text-stroke: 0.05em rgba(189, 168, 0, 1);
@@ -47,6 +47,7 @@ button {
     border-style: ridge;
     border-color: silver;
     border-width: 0.2em;
+    border-radius: 25%;
 }
 
 button:hover {
@@ -54,7 +55,7 @@ button:hover {
     font-size: 20px;
     background: black;
     box-sizing: border-box;
-    padding: 1.1em;
+    padding: 0.5em;
     font-weight: bold;
     text-stroke: 0.05em rgba(189, 168, 0, 1);
     -webkit-text-stroke: 0.05em rgba(189, 168, 0, 1);
@@ -323,30 +324,33 @@ main {
 .input-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 0.25em;
-    margin-top: -1em;
+    margin: 0;
 }
 
 #login-page input[type="text"],
 #login-page input[type="password"] {
-    width: 70%;               /* or any value, like '20vw', '320px', etc */
-    height: 1.5em;            /* or '40px', etc. A bit taller than default */
-    background: #222;         /* dark inner color */
-    color: #7EFF00;           /* matching your palette: neon green text */
-    border: 2px solid #fff000;/* gold border, or silver, or your choice */
-    border-radius: 0.7em;     /* smooth corners */
-    font-size: 1.2em;         /* bigger text */
-    padding: 0.6em 1em;       /* extra inner space for comfort */
-    box-shadow: 0 0 10px #60ff3f44 inset; /* subtle neon shadow inside */
-    caret-color: #fff000;     /* gold caret to match accent */
-    outline: none;            /* avoid ugly browser default when focused */
+    width: 65%;
+    height: 1.5em;
+    background: #222;
+    color: #7EFF00;
+    border: 2px solid #fff000;
+    border-radius: 0.7em;
+    font-size: 1.2em;
+    padding: 0.6em 1em;
+    box-shadow: 0 0 10px #60ff3f44 inset;
+    caret-color: #fff000;
+    outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 #login-page input[type="text"]:focus,
 #login-page input[type="password"]:focus {
-    border-color: #7EFF00;             /* more green border on focus */
-    box-shadow: 0 0 0 2px #7EFF0099;   /* glowing outside */
+    border-color: #7EFF00;
+    box-shadow: 0 0 0 2px #7EFF0099;
 }
 
 #quiz-page {
