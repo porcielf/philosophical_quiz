@@ -268,15 +268,19 @@ main {
     align-items: center;
 }
 
+#quiz-background {
+    display: none;
+}
+
 #login-page-border {
-    display: /*flex*/none;
+    display: flex;
     flex-direction: column;
     height: 36.5vh;
     width: 51.5vw;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
-    32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    /*clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+    32% 100%, 6% 78%, 0% 43%, 17% 12%);*/
     background-image: url("../images/silver-border.webp");
     background-size: cover;
     background-position: center;
@@ -301,8 +305,8 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
-    32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    /*clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
+    32% 100%, 6% 78%, 0% 43%, 17% 12%);*/
     animation-name: open-page;
     animation-duration: 1.5s;
     animation-play-state: running;
@@ -355,7 +359,7 @@ main {
 }
 
 #quiz-page-border {
-    display: flex/*none*/;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
