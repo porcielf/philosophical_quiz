@@ -15,4 +15,9 @@ function    switchPage(originPage, targetPage) {
         quizBackground.style.visibility = "visible";
         quizBackground.style.animationPlayState = "running";
     }
+
+    const   buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.offsetHeight;
+    });
 }
