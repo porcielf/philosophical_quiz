@@ -18,6 +18,7 @@ body {
 html, body {
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -395,7 +396,7 @@ main {
 
     to {
         height: 100%;
-        width: 100%;
+        width: 100vw;
         clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 79%, 100% 100%,
         0 100%, 0 80%, 0% 43%, 0 0);
     }
@@ -412,7 +413,7 @@ main {
 
     to {
         height: 98%;
-        width: 98%;
+        width: 98vw;
         clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 79%, 100% 100%,
         0 100%, 0 80%, 0% 43%, 0 0);
         background-image: url("../images/quiz-background.webp");
