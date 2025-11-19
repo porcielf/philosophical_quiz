@@ -360,3 +360,14 @@ main {
 #leaderboard-page {
     display: none;
 }
+
+@media (max-width: 600px) {
+    #login-page-border {
+        height: 50.5vh;
+        width: 64.5vw;
+    }
+    #login-page {
+        height: 48vh;
+        width: 62vw;
+    }
+}
