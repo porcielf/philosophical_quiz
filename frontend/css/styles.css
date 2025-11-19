@@ -276,7 +276,7 @@ main {
     align-items: center;
     clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%,
     32% 100%, 6% 78%, 0% 43%, 17% 12%);
-    background-image: url("../images/silver-border.png");
+    background-image: url("../images/silver-border.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -296,7 +296,7 @@ main {
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    background-image: url("../images/classical-background.png");
+    background-image: url("../images/classical-background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
