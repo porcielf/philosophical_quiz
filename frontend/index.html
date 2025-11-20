@@ -1,4 +1,27 @@
 <!DOCTYPE html>
+<!-- 
+MIT License
+
+Copyright (c) 2025 porcielf-eagle
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -19,6 +42,9 @@
     </head>
     <body>
         <header>
+            <!--
+                See below or the page-switcher.js for more details.
+            -->
             <h1>Philosophical Quiz</h1>
             <nav aria-label="Navigation Menu">
                 <a href="#login"
@@ -55,12 +81,12 @@ The data stored within this section of the app are:
 
 The related PostgreSQL Table has this shape:
 
-+------------+--------------+-----------------+---------------------+-------+
-| player_id  | player_name  | current_room_id |  player_password    | score |
-+------------+--------------+-----------------+---------------------+-------+
-| 1          | Alice        | 1               |  not_1234           | 100   |
-| 2          | Bob          | 1               |  not_my_birthday    | 90    |
-+------------+--------------+-----------------+---------------------+-------+
++------------+--------------+------------------+
+| player_id  | player_name  | player_password  |
++------------+--------------+------------------+
+| 1          | Alice        | not_1234         |
+| 2          | Bob          | not_my_birthday  |
++------------+--------------+------------------+
 
 `score` and `room_id` are not determined using the login-page.
        -->
@@ -93,7 +119,39 @@ are not logged in" message.
 The room selection interface (for logged users) has this shape:
 1) The user sees the message: "Please, choose your preferred category" and
     below a slider with the avilable quiz categories is shown;
-2) 
+2) After the choice, the user is redirected to the relevant room (see below to
+    understand the user's and room ranking system);
+3) In the room, the user will see the trophy's label and the fields for their
+    goals to be reached: 3.1 questions he must write to define the object's
+    scopes, 3.2 technical references from the history and techniques of
+    philosophy, 3.3 the field for the position of the problem (since this kind
+    of content is room-specific and time-specific, it will be served by the
+    bakcend).
+The submission button is showed at the end of the sequence.
+
+**(2.2)**Level Design:
+The rooms are based on a ranking system based on the user's score. There are
+5 levels, one for each range of score:
+
+lvl.1 [from 0 to 100]
+lvl.2 [from 100 to 200]
+lvl.3 [from 200 to 300]
+lvl.4 [from 300 to 500]
+lvl.5 [from 500 to 1000].
+
+Scores are assigned based on quality and time of the problem position. As
+stated in the frontend, the player must overcome three stages before he can
+submit the complete problem position. Each stage is worth 1 point. IF the user
+completes the submission before the end of the time, the score is assigned. 
+Otherwise, the score is not assigned. They can proceed to the next stage only
+after the correct resolution of their current stage. There are extra points for
+players who answer fast: so, since any room accepts a maximum of 1000 players,
+the first player gains 10 extra points, the players from second to tenth gain
+5 extra points, the players from tenth to 100th gain 3 extra points.
+
+**(2.3)**Backend:
+There are X tables to store the game's data:
+
                 -->
             <section id="quiz-page" aria-label="Quiz Page">
                 <img id="login-background"
@@ -112,8 +170,13 @@ The room selection interface (for logged users) has this shape:
                         <button id="mathematics-category">Mathematics</button>
                         <button id="physics-category">Physics</button>
                         <button id="psychology-category">Psychology</button>
-                        <button id="">
+                        <button id="ethics-category">Ethics</button>
+                        <button id="politics-category">Politics</button>
+                        <button id="metaphysics-category">Metaphysics</button>
                     </div>
+                    <input type="radio" id="left-slider-arrow">
+                    <label id="right-slider-arrow-label"
+                        for="right-slider-arrow">&gt;</label>
                 </div>
                 <button id="submit-answer"
                     aria-label="Submit your answer">Submit Answer</button>
