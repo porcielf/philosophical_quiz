@@ -370,6 +370,7 @@ main {
     animation-play-state: /*running*/paused;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    pointer-events: none;
 }
 
 .input-form {
@@ -482,6 +483,7 @@ main {
     animation-play-state: running;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    pointer-events: none;
 }
 
 @keyframes fade-out-login-background {
