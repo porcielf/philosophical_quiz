@@ -79,16 +79,16 @@ The data stored within this section of the app are:
 
 `player_id`, `player_name`, `player_password`. 
 
-The related PostgreSQL Table has this shape:
+The related PostgreSQL Table could have a shape similar to this (with other
+columns after):
 
-+------------+--------------+------------------+
-| player_id  | player_name  | player_password  |
-+------------+--------------+------------------+
-| 1          | Alice        | not_1234         |
-| 2          | Bob          | not_my_birthday  |
-+------------+--------------+------------------+
-
-`score` and `room_id` are not determined using the login-page.
++-----------------+--------------+------------------+
+| player_id(PK)*  | player_name  | player_password  |
++-----------------+--------------+------------------+
+| 1               | Alice        | not_1234         |
+| 2               | Bob          | not_my_birthday  |
++-----------------+--------------+------------------+
+*PK stands for 'primary key'.
        -->
             <section id="login-page" aria-label="Login Page">
                 <img id="quiz-background"
@@ -148,10 +148,32 @@ after the correct resolution of their current stage. There are extra points for
 players who answer fast: so, since any room accepts a maximum of 1000 players,
 the first player gains 10 extra points, the players from second to tenth gain
 5 extra points, the players from tenth to 100th gain 3 extra points.
+The ranking is determined by the score.
 
 **(2.3)**Backend:
-There are X tables to store the game's data:
+Here I will give an overview about the structure of the game data.
 
+2.3.1
+Player table updated with the elements from the game logic:
+
++-----------------+--------------+------------------+--------------+
+| player_id(PK)   | player_name  | player_password  | room_num(FK) |
++-----------------+--------------+------------------+--------------+
+| 1               | Alice        | not_1234         | none         |
+| 2               | Bob          | not_my_birthday  | room_1       |
++-----------------+--------------+------------------+--------------+
+       *******STILL THE PLAYER TABLE!!!!*****************
+                  +-------+-------+---------+
+                  | level | score | ranking |
+                  +-------+-------+---------+
+                  | 1     | 56    | 2nd     |
+                  | 5     | 678   | 1st     |
+                  +-------+-------+---------+
+
+2.3.2
++-------------+-----------+------------+-------------------------+
+| room_id(PK) | room_name | game_state | current_question_id(FK) | 
++-------------+-----------+------------+-------------------------+
                 -->
             <section id="quiz-page" aria-label="Quiz Page">
                 <img id="login-background"
