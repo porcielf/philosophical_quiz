@@ -6,6 +6,12 @@
         <meta name="description" content="A philosophical quiz application">
         <meta name="keywords" content="philosophy, quiz, game">
         <meta name="author" content="porcielf-eagle">
+        <script>
+            if (window.location.hash) {
+                history.replaceState(null, '', window.location.pathname
+                + window.location.search);
+            }
+        </script>
         <title>Philosophical Quiz</title>
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/styles.css">
@@ -29,8 +35,35 @@
                     Leaderboard</a>
             </nav>
         </header>
+        <!--
+======== MAIN SECTION =========================================================
+        -->
         <main>
             <div id="login-page-border">
+<!--
+**(1)**Login design:
+The user enters the website using its login credentials:
+IF the username is already stored, it must match the password; ELSE a new
+password is required - BOTH username and password are required in order to
+play the game. IF the username and password are new, the username is
+registered as a new player. By using the join-button, the user will access
+the quiz-page section.
+
+The data stored within this section of the app are:
+
+`player_id`, `player_name`, `player_password`. 
+
+The related PostgreSQL Table has this shape:
+
++------------+--------------+-----------------+---------------------+-------+
+| player_id  | player_name  | current_room_id |  player_password    | score |
++------------+--------------+-----------------+---------------------+-------+
+| 1          | Alice        | 1               |  not_1234           | 100   |
+| 2          | Bob          | 1               |  not_my_birthday    | 90    |
++------------+--------------+-----------------+---------------------+-------+
+
+`score` and `room_id` are not determined using the login-page.
+       -->
             <section id="login-page" aria-label="Login Page">
                 <img id="quiz-background"
                 src="./images/quiz-background.webp"
@@ -49,13 +82,39 @@
             </section>
             </div>
             <div id="quiz-page-border">
+                <!--
+**(2)**Quiz Design:
+**(2.1)**Frontend:
+The user can join a specific room based on the rooms' game states, their
+current score, the rooms' categories, IF they are logged in. They cannot join
+a room IF they are not logged in: in that case, they will see a "Sorry, you
+are not logged in" message.
+
+The room selection interface (for logged users) has this shape:
+1) The user sees the message: "Please, choose your preferred category" and
+    below a slider with the avilable quiz categories is shown;
+2) 
+                -->
             <section id="quiz-page" aria-label="Quiz Page">
                 <img id="login-background"
                 src="./images/classical-background.webp"
                 alt="login-background" class="background-image">
                 <div id="quiz-area">
                 <h2>Quiz</h2>
-                <p>What's the meaning of life?</p>
+                <p>Sorry, you are not logged in.</p>
+                <p>Please, choose your preferred category:</p>
+                <div id="category-slider">
+                    <input type="radio" id="left-slider-arrow">
+                    <label id="left-slider-arrow-label"
+                        for="left-slider-arrow">&lt;</label>
+                    <div id="categories-container">
+                        <button id="logic-category">Logic</button>
+                        <button id="mathematics-category">Mathematics</button>
+                        <button id="physics-category">Physics</button>
+                        <button id="psychology-category">Psychology</button>
+                        <button id="">
+                    </div>
+                </div>
                 <button id="submit-answer"
                     aria-label="Submit your answer">Submit Answer</button>
                 </div>
